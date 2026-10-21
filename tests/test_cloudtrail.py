@@ -6,10 +6,10 @@ import unittest
 from pathlib import Path
 from unittest.mock import patch
 
-from sentinel_logwatch.cli import main
-from sentinel_logwatch.cloudtrail import load_cloudtrail
-from sentinel_logwatch.detector import build_report, detect
-from sentinel_logwatch.models import Config
+from logwatch.cli import main
+from logwatch.cloudtrail import load_cloudtrail
+from logwatch.detector import build_report, detect
+from logwatch.models import Config
 
 
 def console(**changes):
@@ -85,7 +85,7 @@ class CloudTrailTests(unittest.TestCase):
         self.path.write_text(json.dumps({"Records": [console(), console()]}), encoding="utf-8")
         with self.assertRaisesRegex(ValueError, "record limit"):
             load_cloudtrail(self.path, max_events=1)
-        with patch("sentinel_logwatch.cloudtrail.MAX_CLOUDTRAIL_BYTES", 20):
+        with patch("logwatch.cloudtrail.MAX_CLOUDTRAIL_BYTES", 20):
             with self.assertRaisesRegex(ValueError, "32 MiB"):
                 load_cloudtrail(self.path)
 
@@ -122,6 +122,6 @@ class CloudTrailTests(unittest.TestCase):
         self.assertNotIn("LW004", [a["rule_id"] for a in detect(self.load(records).events, Config())])
 
     def test_combined_demo_contains_all_five_detection_rules(self):
-        from sentinel_logwatch.parsers import load_events
+        from logwatch.parsers import load_events
         example = Path(__file__).resolve().parents[1] / "examples" / "modern-auth.jsonl"
         self.assertEqual({a["rule_id"] for a in detect(load_events(example).events, Config())}, {f"LW00{i}" for i in range(1, 6)})

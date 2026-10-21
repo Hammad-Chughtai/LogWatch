@@ -1,8 +1,8 @@
 import unittest
 from datetime import datetime, timedelta, timezone
 
-from sentinel_logwatch.detector import detect
-from sentinel_logwatch.models import Config, Event
+from logwatch.detector import detect
+from logwatch.models import Config, Event
 
 BASE = datetime(2026, 1, 15, 9, tzinfo=timezone.utc)
 

@@ -5,11 +5,11 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from sentinel_logwatch.cli import load_config, main
-from sentinel_logwatch.detector import build_report
-from sentinel_logwatch.models import Config
-from sentinel_logwatch.parsers import load_events
-from sentinel_logwatch.reporting import render_html
+from logwatch.cli import load_config, main
+from logwatch.detector import build_report
+from logwatch.models import Config
+from logwatch.parsers import load_events
+from logwatch.reporting import render_html
 from tests.test_parsers import record
 
 

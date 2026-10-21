@@ -3,7 +3,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from sentinel_logwatch.parsers import MAX_LINE_LENGTH, ParseError, load_events, parse_line
+from logwatch.parsers import MAX_LINE_LENGTH, ParseError, load_events, parse_line
 
 
 def record(**changes):
