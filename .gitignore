@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+.venv/
+.coverage
+htmlcov/
+build/
+dist/
+*.egg-info/
+reports/
+.env
+.env.*
+.DS_Store
+.idea/
+.vscode/
+*.log
+!examples/openssh.log

@@ -1,0 +1,10 @@
+# Copy this file and tune thresholds for your environment.
+# All values must be positive integers. Windows are limited to 86400 seconds;
+# thresholds are limited to 200000 events/accounts.
+[detection]
+window_seconds = 300
+brute_force_threshold = 5
+spray_user_threshold = 5
+success_failure_threshold = 5
+distributed_failure_threshold = 10
+distributed_source_threshold = 3
