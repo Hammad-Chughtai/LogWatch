@@ -1,0 +1,274 @@
+{
+  "Records": [
+    {
+      "eventVersion": "1.08",
+      "eventSource": "signin.amazonaws.com",
+      "eventName": "ConsoleLogin",
+      "eventTime": "2026-01-15T09:00:00Z",
+      "userIdentity": {
+        "type": "IAMUser",
+        "accountId": "000000000000",
+        "userName": "analyst"
+      },
+      "sourceIPAddress": "192.0.2.40",
+      "responseElements": {
+        "ConsoleLogin": "Success"
+      },
+      "additionalEventData": {
+        "MFAUsed": "Yes"
+      },
+      "awsRegion": "us-east-1"
+    },
+    {
+      "eventVersion": "1.08",
+      "eventSource": "signin.amazonaws.com",
+      "eventName": "ConsoleLogin",
+      "eventTime": "2026-01-15T09:00:20Z",
+      "userIdentity": {
+        "type": "IAMUser",
+        "accountId": "000000000000",
+        "userName": "deploy-admin"
+      },
+      "sourceIPAddress": "198.51.100.100",
+      "responseElements": {
+        "ConsoleLogin": "Failure"
+      },
+      "additionalEventData": {
+        "MFAUsed": "No"
+      },
+      "awsRegion": "us-east-1"
+    },
+    {
+      "eventVersion": "1.08",
+      "eventSource": "signin.amazonaws.com",
+      "eventName": "ConsoleLogin",
+      "eventTime": "2026-01-15T09:00:30Z",
+      "userIdentity": {
+        "type": "IAMUser",
+        "accountId": "000000000000",
+        "userName": "deploy-admin"
+      },
+      "sourceIPAddress": "198.51.100.101",
+      "responseElements": {
+        "ConsoleLogin": "Failure"
+      },
+      "additionalEventData": {
+        "MFAUsed": "No"
+      },
+      "awsRegion": "us-east-1"
+    },
+    {
+      "eventVersion": "1.08",
+      "eventSource": "signin.amazonaws.com",
+      "eventName": "ConsoleLogin",
+      "eventTime": "2026-01-15T09:00:40Z",
+      "userIdentity": {
+        "type": "IAMUser",
+        "accountId": "000000000000",
+        "userName": "deploy-admin"
+      },
+      "sourceIPAddress": "198.51.100.102",
+      "responseElements": {
+        "ConsoleLogin": "Failure"
+      },
+      "additionalEventData": {
+        "MFAUsed": "No"
+      },
+      "awsRegion": "us-east-1"
+    },
+    {
+      "eventVersion": "1.08",
+      "eventSource": "signin.amazonaws.com",
+      "eventName": "ConsoleLogin",
+      "eventTime": "2026-01-15T09:00:50Z",
+      "userIdentity": {
+        "type": "IAMUser",
+        "accountId": "000000000000",
+        "userName": "deploy-admin"
+      },
+      "sourceIPAddress": "198.51.100.103",
+      "responseElements": {
+        "ConsoleLogin": "Failure"
+      },
+      "additionalEventData": {
+        "MFAUsed": "No"
+      },
+      "awsRegion": "us-east-1"
+    },
+    {
+      "eventVersion": "1.08",
+      "eventSource": "signin.amazonaws.com",
+      "eventName": "ConsoleLogin",
+      "eventTime": "2026-01-15T09:01:00Z",
+      "userIdentity": {
+        "type": "IAMUser",
+        "accountId": "000000000000",
+        "userName": "deploy-admin"
+      },
+      "sourceIPAddress": "198.51.100.100",
+      "responseElements": {
+        "ConsoleLogin": "Failure"
+      },
+      "additionalEventData": {
+        "MFAUsed": "No"
+      },
+      "awsRegion": "us-east-1"
+    },
+    {
+      "eventVersion": "1.08",
+      "eventSource": "signin.amazonaws.com",
+      "eventName": "ConsoleLogin",
+      "eventTime": "2026-01-15T09:01:10Z",
+      "userIdentity": {
+        "type": "IAMUser",
+        "accountId": "000000000000",
+        "userName": "deploy-admin"
+      },
+      "sourceIPAddress": "198.51.100.101",
+      "responseElements": {
+        "ConsoleLogin": "Failure"
+      },
+      "additionalEventData": {
+        "MFAUsed": "No"
+      },
+      "awsRegion": "us-east-1"
+    },
+    {
+      "eventVersion": "1.08",
+      "eventSource": "signin.amazonaws.com",
+      "eventName": "ConsoleLogin",
+      "eventTime": "2026-01-15T09:01:20Z",
+      "userIdentity": {
+        "type": "IAMUser",
+        "accountId": "000000000000",
+        "userName": "deploy-admin"
+      },
+      "sourceIPAddress": "198.51.100.102",
+      "responseElements": {
+        "ConsoleLogin": "Failure"
+      },
+      "additionalEventData": {
+        "MFAUsed": "No"
+      },
+      "awsRegion": "us-east-1"
+    },
+    {
+      "eventVersion": "1.08",
+      "eventSource": "signin.amazonaws.com",
+      "eventName": "ConsoleLogin",
+      "eventTime": "2026-01-15T09:01:30Z",
+      "userIdentity": {
+        "type": "IAMUser",
+        "accountId": "000000000000",
+        "userName": "deploy-admin"
+      },
+      "sourceIPAddress": "198.51.100.103",
+      "responseElements": {
+        "ConsoleLogin": "Failure"
+      },
+      "additionalEventData": {
+        "MFAUsed": "No"
+      },
+      "awsRegion": "us-east-1"
+    },
+    {
+      "eventVersion": "1.08",
+      "eventSource": "signin.amazonaws.com",
+      "eventName": "ConsoleLogin",
+      "eventTime": "2026-01-15T09:01:40Z",
+      "userIdentity": {
+        "type": "IAMUser",
+        "accountId": "000000000000",
+        "userName": "deploy-admin"
+      },
+      "sourceIPAddress": "198.51.100.100",
+      "responseElements": {
+        "ConsoleLogin": "Failure"
+      },
+      "additionalEventData": {
+        "MFAUsed": "No"
+      },
+      "awsRegion": "us-east-1"
+    },
+    {
+      "eventVersion": "1.08",
+      "eventSource": "signin.amazonaws.com",
+      "eventName": "ConsoleLogin",
+      "eventTime": "2026-01-15T09:01:50Z",
+      "userIdentity": {
+        "type": "IAMUser",
+        "accountId": "000000000000",
+        "userName": "deploy-admin"
+      },
+      "sourceIPAddress": "198.51.100.101",
+      "responseElements": {
+        "ConsoleLogin": "Failure"
+      },
+      "additionalEventData": {
+        "MFAUsed": "No"
+      },
+      "awsRegion": "us-east-1"
+    },
+    {
+      "eventVersion": "1.08",
+      "eventSource": "signin.amazonaws.com",
+      "eventName": "ConsoleLogin",
+      "eventTime": "2026-01-15T09:02:20Z",
+      "userIdentity": {
+        "type": "Root",
+        "accountId": "000000000000",
+        "userName": "root"
+      },
+      "sourceIPAddress": "203.0.113.99",
+      "responseElements": {
+        "ConsoleLogin": "Success"
+      },
+      "additionalEventData": {
+        "MFAUsed": "No"
+      },
+      "awsRegion": "us-east-1"
+    },
+    {
+      "eventVersion": "1.08",
+      "eventSource": "signin.amazonaws.com",
+      "eventName": "ConsoleLogin",
+      "eventTime": "2026-01-15T09:03:20Z",
+      "userIdentity": {
+        "type": "Root",
+        "accountId": "000000000000",
+        "userName": "root"
+      },
+      "sourceIPAddress": "203.0.113.99",
+      "responseElements": {
+        "ConsoleLogin": "Success"
+      },
+      "additionalEventData": {
+        "MFAUsed": "Yes"
+      },
+      "awsRegion": "us-east-1"
+    },
+    {
+      "eventVersion": "1.08",
+      "eventSource": "signin.amazonaws.com",
+      "eventName": "ConsoleLogin",
+      "eventTime": "2026-01-15T09:03:40Z",
+      "userIdentity": {
+        "type": "AssumedRole",
+        "accountId": "000000000000",
+        "userName": "federated-session"
+      },
+      "sourceIPAddress": "192.0.2.40",
+      "responseElements": {
+        "ConsoleLogin": "Success"
+      },
+      "additionalEventData": {
+        "MFAUsed": "No"
+      },
+      "awsRegion": "us-east-1"
+    },
+    {
+      "eventName": "ListBuckets",
+      "eventSource": "s3.amazonaws.com"
+    }
+  ]
+}

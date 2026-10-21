@@ -1,0 +1,31 @@
+{"host": "web-01", "method": "publickey", "outcome": "success", "source_ip": "192.0.2.10", "timestamp": "2026-01-15T09:00:00Z", "user": "alice"}
+{"host": "aws:000000000000", "identity_type": "IAMUser", "method": "aws-console", "mfa_used": true, "outcome": "success", "source_ip": "192.0.2.40", "timestamp": "2026-01-15T09:00:00Z", "user": "analyst"}
+{"host": "web-01", "method": "password", "outcome": "failure", "source_ip": "192.0.2.20", "timestamp": "2026-01-15T09:00:10Z", "user": "bob"}
+{"host": "web-01", "method": "password", "outcome": "success", "source_ip": "192.0.2.20", "timestamp": "2026-01-15T09:00:20Z", "user": "bob"}
+{"host": "aws:000000000000", "identity_type": "IAMUser", "method": "aws-console", "mfa_used": false, "outcome": "failure", "source_ip": "198.51.100.100", "timestamp": "2026-01-15T09:00:20Z", "user": "deploy-admin"}
+{"host": "aws:000000000000", "identity_type": "IAMUser", "method": "aws-console", "mfa_used": false, "outcome": "failure", "source_ip": "198.51.100.101", "timestamp": "2026-01-15T09:00:30Z", "user": "deploy-admin"}
+{"host": "aws:000000000000", "identity_type": "IAMUser", "method": "aws-console", "mfa_used": false, "outcome": "failure", "source_ip": "198.51.100.102", "timestamp": "2026-01-15T09:00:40Z", "user": "deploy-admin"}
+{"host": "aws:000000000000", "identity_type": "IAMUser", "method": "aws-console", "mfa_used": false, "outcome": "failure", "source_ip": "198.51.100.103", "timestamp": "2026-01-15T09:00:50Z", "user": "deploy-admin"}
+{"host": "web-01", "method": "password", "outcome": "failure", "source_ip": "203.0.113.50", "timestamp": "2026-01-15T09:01:00Z", "user": "admin"}
+{"host": "aws:000000000000", "identity_type": "IAMUser", "method": "aws-console", "mfa_used": false, "outcome": "failure", "source_ip": "198.51.100.100", "timestamp": "2026-01-15T09:01:00Z", "user": "deploy-admin"}
+{"host": "web-01", "method": "password", "outcome": "failure", "source_ip": "203.0.113.50", "timestamp": "2026-01-15T09:01:10Z", "user": "admin"}
+{"host": "aws:000000000000", "identity_type": "IAMUser", "method": "aws-console", "mfa_used": false, "outcome": "failure", "source_ip": "198.51.100.101", "timestamp": "2026-01-15T09:01:10Z", "user": "deploy-admin"}
+{"host": "web-01", "method": "password", "outcome": "failure", "source_ip": "203.0.113.50", "timestamp": "2026-01-15T09:01:20Z", "user": "admin"}
+{"host": "aws:000000000000", "identity_type": "IAMUser", "method": "aws-console", "mfa_used": false, "outcome": "failure", "source_ip": "198.51.100.102", "timestamp": "2026-01-15T09:01:20Z", "user": "deploy-admin"}
+{"host": "web-01", "method": "password", "outcome": "failure", "source_ip": "203.0.113.50", "timestamp": "2026-01-15T09:01:30Z", "user": "admin"}
+{"host": "aws:000000000000", "identity_type": "IAMUser", "method": "aws-console", "mfa_used": false, "outcome": "failure", "source_ip": "198.51.100.103", "timestamp": "2026-01-15T09:01:30Z", "user": "deploy-admin"}
+{"host": "web-01", "method": "password", "outcome": "failure", "source_ip": "203.0.113.50", "timestamp": "2026-01-15T09:01:40Z", "user": "admin"}
+{"host": "aws:000000000000", "identity_type": "IAMUser", "method": "aws-console", "mfa_used": false, "outcome": "failure", "source_ip": "198.51.100.100", "timestamp": "2026-01-15T09:01:40Z", "user": "deploy-admin"}
+{"host": "web-01", "method": "password", "outcome": "failure", "source_ip": "203.0.113.50", "timestamp": "2026-01-15T09:01:50Z", "user": "admin"}
+{"host": "aws:000000000000", "identity_type": "IAMUser", "method": "aws-console", "mfa_used": false, "outcome": "failure", "source_ip": "198.51.100.101", "timestamp": "2026-01-15T09:01:50Z", "user": "deploy-admin"}
+{"host": "web-01", "method": "password", "outcome": "success", "source_ip": "203.0.113.50", "timestamp": "2026-01-15T09:02:10Z", "user": "admin"}
+{"host": "aws:000000000000", "identity_type": "Root", "method": "aws-console", "mfa_used": false, "outcome": "success", "source_ip": "203.0.113.99", "timestamp": "2026-01-15T09:02:20Z", "user": "root"}
+{"host": "vpn-01", "method": "password", "outcome": "failure", "source_ip": "198.51.100.23", "timestamp": "2026-01-15T09:03:00Z", "user": "alice"}
+{"host": "vpn-01", "method": "password", "outcome": "failure", "source_ip": "198.51.100.23", "timestamp": "2026-01-15T09:03:10Z", "user": "bob"}
+{"host": "vpn-01", "method": "password", "outcome": "failure", "source_ip": "198.51.100.23", "timestamp": "2026-01-15T09:03:20Z", "user": "carol"}
+{"host": "aws:000000000000", "identity_type": "Root", "method": "aws-console", "mfa_used": true, "outcome": "success", "source_ip": "203.0.113.99", "timestamp": "2026-01-15T09:03:20Z", "user": "root"}
+{"host": "vpn-01", "method": "password", "outcome": "failure", "source_ip": "198.51.100.23", "timestamp": "2026-01-15T09:03:30Z", "user": "dave"}
+{"host": "vpn-01", "method": "password", "outcome": "failure", "source_ip": "198.51.100.23", "timestamp": "2026-01-15T09:03:40Z", "user": "erin"}
+{"host": "vpn-01", "method": "password", "outcome": "failure", "source_ip": "198.51.100.23", "timestamp": "2026-01-15T09:03:50Z", "user": "frank"}
+{"host": "web-01", "method": "publickey", "outcome": "success", "source_ip": "2001:db8::8", "timestamp": "2026-01-15T09:05:00Z", "user": "deploy"}
+{"host": "web-01", "method": "publickey", "outcome": "success", "source_ip": "192.0.2.10", "timestamp": "2026-01-15T09:06:00Z", "user": "alice"}
