@@ -1,4 +1,4 @@
-# Sentinel LogWatch
+# LogWatch
 
 **Investigate cloud and SSH authentication abuse from local log exports.**
 
@@ -7,7 +7,7 @@
 ![Runtime dependencies: zero](https://img.shields.io/badge/runtime_dependencies-zero-6ee7cd)
 [![MIT License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 
-Sentinel LogWatch is a defensive Python CLI for investigating authentication activity in AWS CloudTrail, SSH logs, and normalized application events. Detect distributed guessing across IPs, spray-like account fan-out, successful logins after repeated failures, and AWS root console sign-ins recorded without MFA. Export a standalone HTML investigation report and structured JSON with traceable evidence.
+LogWatch is a defensive Python CLI for investigating authentication activity in AWS CloudTrail, SSH logs, and normalized application events. Detect distributed guessing across IPs, spray-like account fan-out, successful logins after repeated failures, and AWS root console sign-ins recorded without MFA. Export a standalone HTML investigation report and structured JSON with traceable evidence.
 
 ![Investigation report with severity, source activity, and evidence](docs/report-preview.jpg)
 
@@ -18,13 +18,13 @@ Requires Python **3.11 or newer**. No dependency installation is needed to run f
 ```bash
 git clone https://github.com/Hammad-Chughtai/LogWatch.git
 cd LogWatch
-python -m sentinel_logwatch analyze examples/modern-auth.jsonl --strict --html report.html --json report.json
+python -m logwatch analyze examples/modern-auth.jsonl --strict --html report.html --json report.json
 ```
 
 Open `report.html` in your browser. The fixture is entirely synthetic and uses documentation IP addresses.
 
 ```text
-Sentinel LogWatch | 31 events | 23 failures | 8 successes
+LogWatch | 31 events | 23 failures | 8 successes
 Alerts: 5 (3 high, 2 medium) | Rejected records: 0
 [MEDIUM] LW001 203.0.113.50 -> 'web-01': Repeated password failures
 [HIGH] LW004 198.51.100.101 -> 'aws:000000000000': Distributed account guessing
@@ -48,7 +48,7 @@ The generated [HTML example](docs/demo-report.html) and [JSON example](docs/demo
 Download a CloudTrail JSON log file, decompress it if needed, and run:
 
 ```bash
-python -m sentinel_logwatch analyze cloudtrail.json --format cloudtrail --strict --html cloud-report.html --json cloud-report.json
+python -m logwatch analyze cloudtrail.json --format cloudtrail --strict --html cloud-report.html --json cloud-report.json
 ```
 
 No AWS credentials, SDK, or cloud access is required. The adapter accepts a `{"Records": [...]}` envelope or one event object. It analyzes IAM/root `ConsoleLogin` records and counts unrelated service events and known federated identity types as ignored. Missing MFA evidence stays **unknown**. The root MFA rule requires an explicit `MFAUsed: "No"` and never infers upstream MFA state for federated sessions.
@@ -99,7 +99,7 @@ Unknown fields and duplicate JSON keys are rejected. Do not include passwords, t
 ```
 
 ```bash
-python -m sentinel_logwatch analyze examples/openssh.log --format openssh --strict --html report.html
+python -m logwatch analyze examples/openssh.log --format openssh --strict --html report.html
 ```
 
 Traditional yearless syslog (`Jan 15 09:00:00 ...`), unrelated service messages, and unrecognized authentication formats are rejected. The tool does not guess a year or time zone. Normalize those records to the JSONL schema first.
@@ -107,7 +107,7 @@ Traditional yearless syslog (`Jan 15 09:00:00 ...`), unrelated service messages,
 ## Tune thresholds and use in automation
 
 ```bash
-python -m sentinel_logwatch analyze examples/auth.jsonl --config config.example.toml --strict --fail-on high --json report.json
+python -m logwatch analyze examples/auth.jsonl --config config.example.toml --strict --fail-on high --json report.json
 ```
 
 ```toml
@@ -137,8 +137,8 @@ python -m venv .venv
 # Linux/macOS: source .venv/bin/activate
 # Windows PowerShell: .\.venv\Scripts\Activate.ps1
 python -m pip install .
-sentinel-logwatch --version
-sentinel-logwatch analyze examples/auth.jsonl --html report.html
+logwatch --version
+logwatch analyze examples/auth.jsonl --html report.html
 ```
 
 The CLI has zero runtime dependencies. Building/installing the package uses setuptools through pip and may download build tools.
@@ -148,7 +148,7 @@ The CLI has zero runtime dependencies. Building/installing the package uses setu
 ```bash
 python -m unittest discover -s tests -v
 python tools/generate_demo.py
-python -m sentinel_logwatch analyze examples/modern-auth.jsonl --strict --html docs/demo-report.html --json docs/demo-report.json
+python -m logwatch analyze examples/modern-auth.jsonl --strict --html docs/demo-report.html --json docs/demo-report.json
 ```
 
 Tests cover threshold boundaries, host/account/source isolation, distributed sources, expired windows, cooldowns, public-key handling, UTC offsets, IPv6, cloud identities and MFA, malformed records, oversized input, bounded diagnostics, HTML escaping, CLI exit codes, and equivalent input formats.
@@ -163,7 +163,7 @@ flowchart LR
     E --> G[Structured JSON]
 ```
 
-Source modules are in `sentinel_logwatch/`; fixtures in `examples/`; tests in `tests/`. Read [CONTRIBUTING.md](CONTRIBUTING.md) before proposing changes and [SECURITY.md](SECURITY.md) for security reporting.
+Source modules are in `logwatch/`; fixtures in `examples/`; tests in `tests/`. Read [CONTRIBUTING.md](CONTRIBUTING.md) before proposing changes and [SECURITY.md](SECURITY.md) for security reporting.
 
 ## Scope
 

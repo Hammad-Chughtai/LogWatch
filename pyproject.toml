@@ -3,7 +3,7 @@ requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "sentinel-logwatch"
+name = "logwatch"
 version = "1.0.0"
 description = "Offline authentication-log triage with explainable detections and evidence reports"
 readme = "README.md"
@@ -19,11 +19,11 @@ classifiers = [
 dependencies = []
 
 [project.scripts]
-sentinel-logwatch = "sentinel_logwatch.cli:main"
+logwatch = "logwatch.cli:main"
 
 [project.urls]
 Repository = "https://github.com/Hammad-Chughtai/LogWatch"
 Issues = "https://github.com/Hammad-Chughtai/LogWatch/issues"
 
 [tool.setuptools.packages.find]
-include = ["sentinel_logwatch*"]
+include = ["logwatch*"]

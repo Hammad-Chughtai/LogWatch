@@ -14,7 +14,7 @@ Regenerate the example reports after changes that affect their output:
 
 ```bash
 python tools/generate_demo.py
-python -m sentinel_logwatch analyze examples/modern-auth.jsonl --strict --html docs/demo-report.html --json docs/demo-report.json
+python -m logwatch analyze examples/modern-auth.jsonl --strict --html docs/demo-report.html --json docs/demo-report.json
 ```
 
 Keep runtime dependencies empty unless there is a documented need. Report security issues using the guidance in `SECURITY.md`.
