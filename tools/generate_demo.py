@@ -28,12 +28,12 @@ def main():
 
     directory = ROOT / "examples"
     directory.mkdir(exist_ok=True)
-    (directory / "auth.jsonl").write_text("".join(json.dumps(event, sort_keys=True) + "\n" for event in events), encoding="utf-8")
+    (directory / "auth.jsonl").write_text("".join(json.dumps(event, sort_keys=True) + "\n" for event in events), encoding="utf-8", newline="\n")
     ssh = []
     for index, event in enumerate(events):
         status = "Failed" if event["outcome"] == "failure" else "Accepted"
         ssh.append(f"{event['timestamp']} {event['host']} sshd[{1000 + index}]: {status} {event['method']} for {event['user']} from {event['source_ip']} port {40000 + index} ssh2\n")
-    (directory / "openssh.log").write_text("".join(ssh), encoding="utf-8")
+    (directory / "openssh.log").write_text("".join(ssh), encoding="utf-8", newline="\n")
     print(f"Generated {len(events)} synthetic authentication records in each format.")
 
     cloud = []
@@ -52,7 +52,7 @@ def main():
     console(200, "root", "203.0.113.99", "Success", "Yes", "Root")
     console(220, "federated-session", "192.0.2.40", "Success", "No", "AssumedRole")
     cloud.append({"eventName": "ListBuckets", "eventSource": "s3.amazonaws.com"})
-    (directory / "cloudtrail.json").write_text(json.dumps({"Records": cloud}, indent=2) + "\n", encoding="utf-8")
+    (directory / "cloudtrail.json").write_text(json.dumps({"Records": cloud}, indent=2) + "\n", encoding="utf-8", newline="\n")
     modern = list(events)
     for item in cloud[:13]:
         identity = item["userIdentity"]
@@ -61,7 +61,7 @@ def main():
                        "method": "aws-console", "identity_type": identity["type"],
                        "mfa_used": item["additionalEventData"]["MFAUsed"] == "Yes"})
     modern.sort(key=lambda item: item["timestamp"])
-    (directory / "modern-auth.jsonl").write_text("".join(json.dumps(item, sort_keys=True) + "\n" for item in modern), encoding="utf-8")
+    (directory / "modern-auth.jsonl").write_text("".join(json.dumps(item, sort_keys=True) + "\n" for item in modern), encoding="utf-8", newline="\n")
     print("Generated CloudTrail and combined cloud/SSH authentication fixtures.")
 
 
